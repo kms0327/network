@@ -10,9 +10,10 @@ public class NSLookup {
 		// TODO Auto-generated method stub
 		//반복문 제어 변수
 		boolean exitControl = true;
+		Scanner scanner = null;
 		try{
 			//키보드 입력 변수
-			Scanner scanner = new Scanner(System.in);
+			scanner = new Scanner(System.in);
 			while(exitControl){
 				System.out.print(">");
 				String hostname = scanner.nextLine();
@@ -27,8 +28,13 @@ public class NSLookup {
 					}
 				}
 			}
+			
 		}catch(IOException e){
 			e.printStackTrace();
+		}finally{
+			scanner.close();
 		}
+		
 	}
+	
 }

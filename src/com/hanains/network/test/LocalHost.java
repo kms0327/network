@@ -1,4 +1,4 @@
-package com.hanains.netwrok.test;
+package com.hanains.network.test;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
