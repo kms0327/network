@@ -36,7 +36,7 @@ public class EchoClient {
 				if(me.equals("exit")){
 					break;
 				}
-				outputStream.write(me.getBytes("UTF-8"));
+				outputStream.write((me+"\r\n").getBytes("UTF-8"));
 				outputStream.flush();
 
 				byte[] buffer = new byte[256];
@@ -49,7 +49,7 @@ public class EchoClient {
 		} finally {
 			try {
 				if (inputStream != null) {
-					inputStream.close();
+					inputStream.close(); //inputStream 닫히면 socket도 닫힌다
 				}
 				if (outputStream != null) {
 					outputStream.close();
