@@ -13,6 +13,7 @@ public class UDPechoClient {
 	public static void main(String[] args) {
 		DatagramSocket datagramSocket =null;
 		Scanner scanner = null;
+		System.out.println("exit 누르면 나갈 수 있습니다.");
 		try{
 			while(true){
 				System.out.print("입력>>");
